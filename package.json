@@ -1,0 +1,19 @@
+{
+  "name": "hamilton-7-character-manager-javascript-lovers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "compile": "sass --watch ./resources/sass/style.scss:./resources/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/becodeorg/hamilton-7-character-manager-javascript-lovers.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/becodeorg/hamilton-7-character-manager-javascript-lovers/issues"
+  },
+  "homepage": "https://github.com/becodeorg/hamilton-7-character-manager-javascript-lovers#readme"
+}
