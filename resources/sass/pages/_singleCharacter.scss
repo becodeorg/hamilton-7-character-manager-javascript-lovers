@@ -1,0 +1,83 @@
+@use "../base/colors" as *;
+@use "../base/typography" as *;
+
+body {
+  background: $linear-value;
+  header {
+    h1 {
+      color: white;
+      text-align: center;
+      font-family: $heading-font;
+      border-bottom: 2px solid white;
+      margin: 20px;
+    }
+  }
+
+  main {
+    .card {
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.05);
+      width: 370px;
+      max-width: 370px;
+      padding: 20px;
+      margin: auto;
+      margin-bottom: 20px;
+      margin-top: 20px;
+
+      &__image {
+        width: 150px;
+        border-radius: 50%;
+        display: flex;
+        margin: auto;
+      }
+
+      &__name {
+        color: white;
+        text-align: center;
+        font-family: $heading-font;
+        margin: 20px;
+      }
+
+      &__short-description {
+        color: white;
+        text-align: center;
+        font-weight: 100;
+        font-size: 10px;
+        font-family: $paragraph-font;
+      }
+
+      &__description {
+        color: white;
+        text-align: justify;
+        margin: 20px;
+        font-family: $paragraph-font;
+      }
+
+      .edit-buttons {
+        display: flex;
+        justify-content: center;
+        .btn-update {
+          background-color: transparent;
+          border-radius: 20px;
+          position: relative;
+          text-align: center;
+          padding: 10px;
+          position: relative;
+          color: white;
+          border: 2px solid white;
+          font-weight: 400;
+          margin: 20px;
+          font-family: $paragraph-font;
+          &:hover {
+            color: black;
+            background-color: white;
+          }
+        }
+      }
+
+      .btn-delete {
+        @extend .btn-update;
+      }
+    }
+  }
+}
