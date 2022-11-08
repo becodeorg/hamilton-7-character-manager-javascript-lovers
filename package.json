@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/becodeorg/hamilton-7-character-manager-javascript-lovers/issues"
   },
-  "homepage": "https://github.com/becodeorg/hamilton-7-character-manager-javascript-lovers#readme"
+  "homepage": "https://github.com/becodeorg/hamilton-7-character-manager-javascript-lovers#readme",
+  "dependencies": {
+    "sass": "^1.56.0"
+  }
 }
