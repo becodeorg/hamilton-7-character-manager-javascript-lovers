@@ -1,5 +1,5 @@
-import {CharacterManager} from './classes/CharacterManager.js';
-import {StringUtils} from './classes/StringUtils.js';
+import {CharacterManager} from './Classes/CharacterManager.js';
+import {StringUtils} from './Classes/StringUtils.js';
 
 const url = `https://character-database.becode.xyz/`;
 const characterManager = new CharacterManager(url);
