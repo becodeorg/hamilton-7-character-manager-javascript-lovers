@@ -42,7 +42,6 @@ export class CharacterManager {
 	}
 
 	displaySingleCharacter(id) {
-		console.log("test");
 		window.location.href = `singleCharacter.html?id=${id}`;
 	}
 

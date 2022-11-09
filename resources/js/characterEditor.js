@@ -26,5 +26,5 @@ promise.then(data => {
 });
 
 document.querySelector('.btn-save').addEventListener('click', () => {
-	// TODO
+	// 
 });
