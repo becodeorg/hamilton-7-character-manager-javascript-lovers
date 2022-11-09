@@ -27,11 +27,19 @@ export class Character {
 		return this.shortDescription;
 	}
 
+	get getID() {
+		return this.id;
+	}
+
+	set changeID(newId) {
+		this.id = newId;
+	}
+
 	set changeName(newName) {
 		this.name = newName;
 	}
 
-	set chanheShortDescription(newShortDescription) {
+	set changeShortDescription(newShortDescription) {
 		this.shortDescription = newShortDescription;
 	}
 
