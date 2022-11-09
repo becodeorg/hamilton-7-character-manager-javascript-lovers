@@ -4,6 +4,11 @@
 body {
   background: $linear-value;
   header {
+    .fa-arrow-left {
+      color: white;
+      font-size: 50px;
+
+    }
     h1 {
       color: white;
       text-align: center;
@@ -22,7 +27,7 @@ body {
       padding: 20px;
       margin: auto;
       margin-bottom: 20px;
-      margin-top: 20px;
+      margin-top: 40px;
 
       &__image {
         width: 150px;
@@ -31,11 +36,14 @@ body {
         margin: auto;
       }
 
-      &__name {
+      .card__name {
         color: white;
         text-align: center;
         font-family: $heading-font;
         margin: 20px;
+         &:hover{
+        cursor: pointer;
+      }
       }
 
       &__short-description {
@@ -63,20 +71,37 @@ body {
           text-align: center;
           padding: 10px;
           position: relative;
-          color: white;
-          border: 2px solid white;
+          color: #198cbd;
+          border: 2px solid #198cbd;
           font-weight: 400;
           margin: 20px;
           font-family: $paragraph-font;
           &:hover {
-            color: black;
-            background-color: white;
+            color: white;
+            background-color: #198cbd;
+            border: none;
+            cursor: pointer;
           }
         }
-      }
-
-      .btn-delete {
-        @extend .btn-update;
+        .btn-delete {
+          background-color: transparent;
+          border-radius: 20px;
+          position: relative;
+          text-align: center;
+          padding: 10px;
+          position: relative;
+          color: #f0072c;
+          border: 2px solid #f0072c;
+          font-weight: 400;
+          margin: 20px;
+          font-family: $paragraph-font;
+          &:hover {
+            color: white;
+            background-color: #f0072c;
+            border: none;
+            cursor: pointer;
+          }
+        }
       }
     }
   }
