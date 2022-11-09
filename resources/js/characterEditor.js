@@ -18,7 +18,6 @@ const shortDesc = document.querySelector('.edit-card__short-description');
 const desc = document.querySelector('.edit-card__description');
 
 promise.then(data => {
-
 	img.setAttribute('src', 'data:image/gif;base64,' + data.image);
 	name.setAttribute('value', data.name);
 	shortDesc.setAttribute('value', data.shortDescription);
