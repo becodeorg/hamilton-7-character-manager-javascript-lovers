@@ -4,12 +4,33 @@
 body {
   background: $linear-value;
   header {
+    display: flex;
+    border-bottom: 2px solid white;
+    align-items: center;
+    position: relative;
+
+    .fa-arrow-left {
+      color: white;
+      font-size: 30px;
+      position: absolute;
+      top: 9px;
+      left: 0;
+      margin: 20px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
     h1 {
+      margin: auto;
+      margin-top: 15px;
+      margin-bottom: 15px;
       color: white;
       text-align: center;
       font-family: $heading-font;
-      border-bottom: 2px solid white;
-      margin: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 
@@ -22,7 +43,7 @@ body {
       padding: 20px;
       margin: auto;
       margin-bottom: 20px;
-      margin-top: 20px;
+      margin-top: 40px;
 
       &__image {
         width: 150px;
@@ -31,11 +52,14 @@ body {
         margin: auto;
       }
 
-      &__name {
+      .card__name {
         color: white;
         text-align: center;
         font-family: $heading-font;
         margin: 20px;
+        &:hover {
+          cursor: pointer;
+        }
       }
 
       &__short-description {
@@ -57,26 +81,41 @@ body {
         display: flex;
         justify-content: center;
         .btn-update {
-          background-color: transparent;
           border-radius: 20px;
-          position: relative;
           text-align: center;
           padding: 10px;
-          position: relative;
-          color: white;
-          border: 2px solid white;
           font-weight: 400;
           margin: 20px;
           font-family: $paragraph-font;
+          color: white;
+          background-color: #198cbd;
+          border: 2px solid #198cbd;
+
           &:hover {
-            color: black;
-            background-color: white;
+            color: #198cbd;
+            border: 2px solid #198cbd;
+            background-color: transparent;
+            cursor: pointer;
           }
         }
-      }
+        .btn-delete {
+          border-radius: 20px;
+          text-align: center;
+          padding: 10px;
+          font-weight: 400;
+          margin: 20px;
+          font-family: $paragraph-font;
+          color: white;
+          background-color: #f0072c;
+          border: 2px solid #f0072c;
 
-      .btn-delete {
-        @extend .btn-update;
+          &:hover {
+            color: #f0072c;
+            border: 2px solid #f0072c;
+            background-color: transparent;
+            cursor: pointer;
+          }
+        }
       }
     }
   }
