@@ -1,9 +1,14 @@
 export class Character {
-	constructor(name, shortDescription, description, image) {
+	constructor(id, name, shortDescription, description, image) {
+		this.id = id;
 		this.name = name;
 		this.shortDescription = shortDescription;
 		this.description = description;
 		this.image = image;
+	}
+
+	get getID() {
+		return this.id;
 	}
 
 	get getName() {

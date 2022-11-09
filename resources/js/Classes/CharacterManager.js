@@ -1,4 +1,5 @@
-import {StringUtils} from './StringUtils.js';
+import { StringUtils } from './StringUtils.js';
+import { Character } from './Character.js';
 
 export class CharacterManager {
 	
@@ -42,12 +43,21 @@ export class CharacterManager {
 		}
 	}
 
+	displaySingleCharacter(id) {
+		console.log("test");
+		window.location.href = `singleCharacter.html?id=${id}`;
+	}
+
 	displayCharacters() {
 		const main = document.querySelector('main');
 		const promise = this.getCharactersPromise();
+		const characters = [];
 
 		promise.then(data => {
 			for (let i = 0; i < data.length; i++) {
+				const character = new Character(data[i].id, data[i].name, data[i].shortDescription, data[i].description, data[i].image);
+				characters.push(character);
+
 				const article = document.createElement('article');
 				article.classList.add('card');
 				main.appendChild(article);
@@ -60,6 +70,9 @@ export class CharacterManager {
 				const h2 = document.createElement('h2');
 				h2.classList.add('card__name');
 				h2.append(data[i].name);
+				h2.addEventListener('click', () => {
+					this.displaySingleCharacter(character.id);
+				});
 				article.appendChild(h2);
 
 				const pShortDesc = document.createElement('p');
@@ -73,37 +86,28 @@ export class CharacterManager {
 				article.appendChild(pDesc);
 			}
 		});
+
+		return characters;
 	}
 
-	displaySingleCharacter(data) {
-		const stringUtils = new StringUtils();
+	displayCharacter(id) {
+		const promise = this.getCharacterPromiseByID(id);
 
-		const main = document.querySelector('main');
-		const promise = stringUtils.isID(data) ? this.getCharacterPromiseByID(data) : this.getCharacterPromiseByName(data);
-		
 		promise.then(data => {
-			console.log(data);
-			
-			// if (!data.name) {
-			// 	console.log("error pass there");
-			// 	return "ERROR: undifined";
-			// }
+			const img = document.querySelector('.card__image');
+			const name = document.querySelector('.card__name');
+			const shortDesc = document.querySelector('.card__short-description');
+			const desc = document.querySelector('.card__description');
 
-			const cardImage = document.querySelector('.card__image');
-			const cardName = document.querySelector('.card__name');
-			const cardShortDescription = document.querySelector('.card__short-description');
-			const cardDescription = document.querySelector('.card__description');
+			img.setAttribute('src', '');
+			name.innerHTML = '';
+			shortDesc.innerHTML = '';
+			desc.innerHTML = '';
 
-			cardImage.setAttribute('src', 'data:image/gif;base64,' + data.image);
-
-			cardName.innerHTML = "";
-			cardName.append(data.name);
-
-			cardShortDescription.innerHTML = "";
-			cardShortDescription.append(data.shortDescription);
-
-			cardDescription.innerHTML = "";
-			cardDescription.append(data.description);
+			img.setAttribute('src', 'data:image/gif;base64,' + data.image);
+			name.append(data.name);
+			shortDesc.append(data.shortDescription);
+			desc.append(data.description);
 		});
 	}
 }
