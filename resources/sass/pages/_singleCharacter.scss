@@ -50,6 +50,7 @@ body {
         border-radius: 50%;
         display: flex;
         margin: auto;
+        margin-top: 20px;
       }
 
       .card__name {
@@ -74,20 +75,24 @@ body {
         color: white;
         text-align: justify;
         margin: 20px;
+        font-size: 14px;
         font-family: $paragraph-font;
       }
 
       .edit-buttons {
         display: flex;
         justify-content: center;
+        margin: 20px;
         .btn-update {
-          border-radius: 20px;
           text-align: center;
-          padding: 10px;
+          padding: 5px;
           font-weight: 400;
-          margin: 20px;
+
+          width: 150px;
+          height: 50px;
           font-family: $paragraph-font;
           color: white;
+          font-size: 12px;
           background-color: #198cbd;
           border: 2px solid #198cbd;
 
@@ -99,13 +104,14 @@ body {
           }
         }
         .btn-delete {
-          border-radius: 20px;
           text-align: center;
-          padding: 10px;
+          padding: 5px;
           font-weight: 400;
-          margin: 20px;
+          width: 150px;
+          height: 50px;
           font-family: $paragraph-font;
           color: white;
+          font-size: 12px;
           background-color: #f0072c;
           border: 2px solid #f0072c;
 
@@ -118,5 +124,28 @@ body {
         }
       }
     }
+  }
+}
+@media only screen and (max-width: 412px) {
+  .edit-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn-delete {
+    margin: 0px;
+    margin-top: 10px;
+  }
+  .btn-update {
+    margin: 0px;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (min-width: 413px) {
+  .btn-delete {
+    margin-left: 10px;
+  }
+  .btn-update {
+    margin-right: 10px;
   }
 }
