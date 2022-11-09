@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/becodeorg/hamilton-7-character-manager-javascript-lovers#readme",
   "dependencies": {
+    "axios": "^0.21.4",
     "sass": "^1.56.0"
   }
 }
