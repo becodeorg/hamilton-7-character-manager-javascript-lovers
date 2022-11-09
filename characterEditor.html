@@ -13,17 +13,19 @@
 		<h1></h1>
 	</header>
 	<main>
-		<article class="edit-card">
-			<input class="edit-card__image" type="file" src="" alt="card-image">
+		<form class="edit-card">
+			<img class="card__image" alt="preview">
+			<input style="color: transparent" class="edit-card__image" type="file" accept="image/png, image/jpeg">
 			<input type="text" class="edit-card__name">
 			<input type="text" class="edit-card__short-description">
 			<textarea class="edit-card__description"></textarea>
 			<div class="edit-buttons">
-				<button class="btn-save">Save changes</button>
+				<button type="submit" class="btn-save">Save changes</button>
 				<button class="btn-delete">Delete Character</button>
 			</div>
-		</article>
+		</form>
 	</main>
 	<script src="./resources/js/tinymce.js"></script>
+	<script type="module" src="./resources/js/characterEditor.js"></script>
 </body>
 </html>
