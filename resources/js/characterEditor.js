@@ -1,5 +1,5 @@
-import {CharacterManager} from './Classes/CharacterManager.js';
-import {StringUtils} from './Classes/StringUtils.js';
+import { CharacterManager } from './Classes/CharacterManager.js';
+import { StringUtils } from './Classes/StringUtils.js';
 import { Character } from './Classes/Character.js';
 
 const url = `https://character-database.becode.xyz/`;
@@ -18,8 +18,13 @@ const shortDesc = document.querySelector('.edit-card__short-description');
 const desc = document.querySelector('.edit-card__description');
 
 promise.then(data => {
+
 	img.setAttribute('src', 'data:image/gif;base64,' + data.image);
 	name.setAttribute('value', data.name);
 	shortDesc.setAttribute('value', data.shortDescription);
 	desc.append(data.description);
+});
+
+document.querySelector('.btn-save').addEventListener('click', () => {
+	// TODO
 });

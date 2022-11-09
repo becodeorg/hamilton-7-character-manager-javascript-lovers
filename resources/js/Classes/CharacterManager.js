@@ -21,7 +21,6 @@ export class CharacterManager {
 			console.log(error);
 			this.getCharacterPromiseByID(name);
 		} finally {
-			console.log(`${this.url}characters?name=${name}`);
 			const response = await fetch(`${this.url}characters?name=${name}`);
 			const promise = await response.json();
 
@@ -35,7 +34,6 @@ export class CharacterManager {
 		} catch (error) {
 			console.log(error);
 		} finally {
-			console.log(`${this.url}characters/${id}`);
 			const response = await fetch(`${this.url}characters/${id}`);
 			const promise = await response.json();
 
