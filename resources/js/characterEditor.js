@@ -45,17 +45,22 @@ selectedItems.uploadImg.addEventListener('input', () => {
 
 document.querySelector('.btn-save').addEventListener('click', () => {
 	selectedItems = selectItems();
-	const dataUrlPromise = dataUrlConverter.getDataUrl(selectedItems.uploadImg.files[0]);
+	const file = selectedItems.uploadImg.files[0];
+	let dataUrlPromise;
 
-	dataUrlPromise.then(dataUrl => {
-		const newCharacter = new Character(
-			id,
-			selectedItems.name.value,
-			selectedItems.shortDesc.value,
-			selectedItems.desc.value,
-			dataUrl
-		);
+	if (file) {
+		dataUrlPromise = dataUrlConverter.getDataUrl(file);
 
-		console.log(newCharacter);
-	});
+		dataUrlPromise.then(dataUrl => {
+			const newCharacter = new Character(
+				id,
+				selectedItems.name.value,
+				selectedItems.shortDesc.value,
+				// TODO document.querySelector('iframe').contentWindow,
+				dataUrl
+			);
+	
+			console.log(newCharacter);
+		});
+	}
 });
