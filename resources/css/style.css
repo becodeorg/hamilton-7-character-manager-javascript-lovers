@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sofia&display=swap");
+body {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+body header {
+  display: flex;
+  border-bottom: 2px solid white;
+  align-items: center;
+  position: relative;
+}
+body header .fa-arrow-left {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 9px;
+  left: 0;
+  margin: 20px;
+}
+body header .fa-arrow-left:hover {
+  cursor: pointer;
+}
+body header h1 {
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: white;
+  text-align: center;
+  font-family: "Sofia", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main .card {
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.05);
+  width: 370px;
+  max-width: 370px;
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+body main .card__image {
+  width: 150px;
+  border-radius: 50%;
+  display: flex;
+  margin: auto;
+}
+body main .card .card__name {
+  color: white;
+  text-align: center;
+  font-family: "Sofia", cursive;
+  margin: 20px;
+}
+body main .card .card__name:hover {
+  cursor: pointer;
+}
+body main .card__short-description {
+  color: white;
+  text-align: center;
+  font-weight: 100;
+  font-size: 10px;
+  font-family: "Open Sans", sans-serif;
+}
+body main .card__description {
+  color: white;
+  text-align: justify;
+  margin: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+body main .card .edit-buttons {
+  display: flex;
+  justify-content: center;
+}
+body main .card .edit-buttons .btn-update {
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+  font-weight: 400;
+  margin: 20px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  background-color: #198cbd;
+  border: 2px solid #198cbd;
+}
+body main .card .edit-buttons .btn-update:hover {
+  color: #198cbd;
+  border: 2px solid #198cbd;
+  background-color: transparent;
+  cursor: pointer;
+}
+body main .card .edit-buttons .btn-delete {
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+  font-weight: 400;
+  margin: 20px;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  background-color: #f0072c;
+  border: 2px solid #f0072c;
+}
+body main .card .edit-buttons .btn-delete:hover {
+  color: #f0072c;
+  border: 2px solid #f0072c;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=style.css.map */
