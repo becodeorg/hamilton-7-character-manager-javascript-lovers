@@ -10,6 +10,10 @@ export class StringUtils {
 		return data;
 	}
 
+	extractID(url) {
+		return url.substring(url.search(/\b=\b/) + 1);
+	}
+
 	hasNumber(str) {
 		return /\d/.test(str);
 	}

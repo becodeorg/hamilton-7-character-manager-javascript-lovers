@@ -6,6 +6,10 @@ const characterManager = new CharacterManager(url);
 const stringUtils = new StringUtils();
 
 const currentURL = window.location.href;
-let data = stringUtils.extractData(currentURL);
+const id = stringUtils.extractData(currentURL);
 
-characterManager.displaySingleCharacter(data);
+characterManager.displayCharacter(id);
+
+document.querySelector('.btn-update').addEventListener('click', () => {
+	window.location.href = `characterEditor.html?id=${id}`;
+});
