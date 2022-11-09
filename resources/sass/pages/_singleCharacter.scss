@@ -3,6 +3,7 @@
 
 body {
   background: $linear-value;
+
   header {
     display: flex;
     border-bottom: 2px solid white;
@@ -21,6 +22,7 @@ body {
         cursor: pointer;
       }
     }
+
     h1 {
       margin: auto;
       margin-top: 15px;
@@ -58,6 +60,7 @@ body {
         text-align: center;
         font-family: $heading-font;
         margin: 20px;
+
         &:hover {
           cursor: pointer;
         }
@@ -83,11 +86,11 @@ body {
         display: flex;
         justify-content: center;
         margin: 20px;
+
         .btn-update {
           text-align: center;
           padding: 5px;
           font-weight: 400;
-
           width: 150px;
           height: 50px;
           font-family: $paragraph-font;
@@ -103,6 +106,7 @@ body {
             cursor: pointer;
           }
         }
+
         .btn-delete {
           text-align: center;
           padding: 5px;
@@ -132,19 +136,23 @@ body {
     flex-direction: column;
     align-items: center;
   }
+
   .btn-delete {
     margin: 0px;
     margin-top: 10px;
   }
+
   .btn-update {
     margin: 0px;
     margin-bottom: 10px;
   }
 }
+
 @media only screen and (min-width: 413px) {
   .btn-delete {
     margin-left: 10px;
   }
+  
   .btn-update {
     margin-right: 10px;
   }
