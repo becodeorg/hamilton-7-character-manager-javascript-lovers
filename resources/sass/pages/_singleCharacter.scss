@@ -59,6 +59,11 @@ body {
         align-items: center;
         justify-content: center;
         border-radius: 50%;
+
+        &:hover {
+          cursor: pointer;
+          background-color: #198cbd;
+        }
       }
 
       .card__name {
@@ -69,6 +74,7 @@ body {
 
         &:hover {
           cursor: pointer;
+            color: #198cbd;
         }
       }
 
