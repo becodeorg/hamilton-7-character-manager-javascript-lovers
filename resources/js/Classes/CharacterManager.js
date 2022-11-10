@@ -41,6 +41,34 @@ export class CharacterManager {
 		}
 	}
 
+	async changeCharacterRequest(character) {
+		console.log(character);
+		const requestOptions = {
+			method: 'PUT',
+			headers: {'Content-Type': 'application/json'},
+			body: JSON.stringify(character)
+		};
+
+		try {
+			const response = await fetch(`${this.url}characters/${character.id}`, requestOptions);
+		} catch (error) {
+			console.log(error);
+		} finally {
+			const response = await fetch(`${this.url}characters/${character.id}`, requestOptions);
+			const promise = await response.json();
+
+			return promise;
+		}
+	}
+
+	async changeCharacterData(character, selectedItems) {
+		const promise = this.changeCharacterRequest(character);
+
+		promise.then(data => {
+			console.log(data);
+		});
+	}
+
 	displaySingleCharacter(id) {
 		window.location.href = `singleCharacter.html?id=${id}`;
 	}

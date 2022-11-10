@@ -56,11 +56,21 @@ document.querySelector('.btn-save').addEventListener('click', () => {
 				id,
 				selectedItems.name.value,
 				selectedItems.shortDesc.value,
-				// TODO document.querySelector('iframe').contentWindow,
+				selectedItems.desc.value,
 				dataUrl
 			);
 	
-			console.log(newCharacter);
+		// characterManager.changeCharacterData(newCharacter);
 		});
+	} else {
+		const newCharacter = new Character(
+			id,
+			selectedItems.name.value,
+			selectedItems.shortDesc.value,
+			selectedItems.desc.value,
+			selectedItems.img.src
+		);
+
+		characterManager.changeCharacterData(newCharacter, selectedItems);
 	}
 });
