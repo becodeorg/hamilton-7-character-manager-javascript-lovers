@@ -1,0 +1,145 @@
+@use "../base/colors" as *;
+@use "../base/typography" as *;
+
+.create-card {
+  .card__image {
+    padding: 2px;
+    background-color: white;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100px ;
+    height: 100px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+  }
+  .create-card__image {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+
+    .btn-upload {
+      background-color: hsla(0, 0%, 100%, 0.05);
+      border: 2px solid rgb(255, 255, 255);
+      color: rgb(255, 255, 255);
+      font-size: 12px;
+      padding: 5px;
+      display: flex;
+    }
+    input[type="file"] {
+      left: 0;
+      top: 0;
+      opacity: 0;
+      position: absolute;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .create-card__set--position {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .create-card__name {
+      background-color: rgba(255, 255, 255, 0.05);
+      margin-top: 20px;
+      width: 350px;
+      height: 30px;
+      border-radius: 5px;
+      border: 2px solid white;
+      color: white;
+      padding: 20px;
+      font-size: 24px;
+      font-family: $heading-font;
+      &:focus {
+        outline: 2px solid #198cbd;
+        border: none;
+      }
+    }
+    .create-card__short-description {
+      background-color: rgba(255, 255, 255, 0.05);
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 350px;
+      height: 30px;
+      border-radius: 5px;
+      border: 2px solid white;
+      color: white;
+      padding: 20px;
+      font-size: 12px;
+      font-family: $paragraph-font;
+      &:focus {
+        outline: 2px solid #198cbd;
+        border: none;
+      }
+    }
+    .create-card__description {
+      background-color: rgba(255, 255, 255, 0.05);
+      width: 350px;
+      border-radius: 5px;
+      border: 2px solid white;
+      color: white;
+      padding: 20px;
+      font-size: 14px;
+      font-family: $paragraph-font;
+      &:focus {
+        outline: 2px solid #198cbd;
+        border: none;
+      }
+    }
+    /*.tox-edit-area__iframe {
+      background-color: rgba(255, 255, 255, 0.05) !important;
+    }
+    .tox-tinymce {
+      width: 350px !important ;
+      border: 2px solid #ffffff !important ;
+    }
+    .tox-mbtn__select-label {
+      color: #198cbd !important ;
+      font-size: 12px !important ;
+    }
+    .tox-editor-header,
+    .tox-menubar,
+    .tox-toolbar__primary,
+    .tox-toolbar-overlord {
+      background-color: rgba(255, 255, 255, 0.5) !important;
+    }
+    .mce-content-body {
+      color: red !important ;
+    }*/
+  }
+
+  .create-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 350px;
+
+    .btn-create {
+      text-align: center;
+      padding: 5px;
+      font-weight: 400;
+      width: 150px;
+      height: 50px;
+      font-family: $paragraph-font;
+      color: white;
+      font-size: 12px;
+      background-color: #198cbd;
+      border: 2px solid #198cbd;
+      margin-bottom: 20px;
+
+      &:hover {
+        color: #198cbd;
+        border: 2px solid #198cbd;
+        background-color: transparent;
+        cursor: pointer;
+      }
+    }
+  }
+}
