@@ -2,6 +2,14 @@
 @use "../base/typography" as *;
 
 .edit-card {
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    width: 370px;
+    max-width: 370px;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 40px;
   .card__image {
     padding: 2px;
     background-color: white;
@@ -47,7 +55,7 @@
     .edit-card__name {
       background-color: rgba(255, 255, 255, 0.05);
       margin-top: 20px;
-      width: 350px;
+      width: 300px;
       height: 30px;
       border-radius: 5px;
       border: 2px solid white;
@@ -64,7 +72,7 @@
       background-color: rgba(255, 255, 255, 0.05);
       margin-top: 20px;
       margin-bottom: 20px;
-      width: 350px;
+      width: 300px;
       height: 30px;
       border-radius: 5px;
       border: 2px solid white;
@@ -79,7 +87,7 @@
     }
     .edit-card__description {
       background-color: rgba(255, 255, 255, 0.05);
-      width: 350px;
+      width: 300px;
       border-radius: 5px;
       border: 2px solid white;
       color: white;
@@ -118,7 +126,7 @@
     justify-content: space-between;
     margin: auto;
     margin-top: 20px;
-    max-width: 350px;
+    max-width: 300px;
     margin-bottom: 20px;
 
     .btn-save {
