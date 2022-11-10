@@ -42,26 +42,34 @@ export class CharacterManager {
 	}
 
 	async changeCharacterRequest(character) {
-		console.log(character);
+		const name = character.name;
+		const shortDescription = character.shortDescription;
+		const description = character.description;
+		let image = character.image;
+		image = image.replace("data:", "").replace(/^.+,/, "");
+
 		const requestOptions = {
-			method: 'PUT',
-			headers: {'Content-Type': 'application/json'},
-			body: JSON.stringify(character)
+		method: "PUT",
+		headers: { "Content-Type": "application/json" },
+		body: JSON.stringify({
+			name,
+			shortDescription,
+			description,
+			image,
+		}),
 		};
 
-		try {
-			const response = await fetch(`${this.url}characters/${character.id}`, requestOptions);
-		} catch (error) {
-			console.log(error);
-		} finally {
-			const response = await fetch(`${this.url}characters/${character.id}`, requestOptions);
-			const promise = await response.json();
+		const response = await fetch(
+		`${this.url}characters/${character.id}`,
+		requestOptions
+		);
 
-			return promise;
-		}
-	}
+		const promise = await response.json();
 
-	async changeCharacterData(character, selectedItems) {
+		return promise;
+  }
+
+	changeCharacterData(character, selectedItems) {
 		const promise = this.changeCharacterRequest(character);
 
 		promise.then(data => {
@@ -95,9 +103,6 @@ export class CharacterManager {
 				const h2 = document.createElement('h2');
 				h2.classList.add('card__name');
 				h2.append(data[i].name);
-				h2.addEventListener('click', () => {
-					this.displaySingleCharacter(character.id);
-				});
 				article.appendChild(h2);
 
 				const pShortDesc = document.createElement('p');
@@ -109,6 +114,14 @@ export class CharacterManager {
 				pDesc.classList.add('card__description');
 				pDesc.append(data[i].description);
 				article.appendChild(pDesc);
+
+				const button = document.createElement('button');
+				button.classList.add('card_button');
+				button.append('See character');
+				button.addEventListener('click', () => {
+					window.location.href = `singleCharacter.html?id=${data[i].id}`;
+				});
+				article.appendChild(button);
 			}
 		});
 

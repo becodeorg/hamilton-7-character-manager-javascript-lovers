@@ -5,6 +5,10 @@ const characterManager = new CharacterManager(url);
 
 const characters = characterManager.displayCharacters();
 
+document.querySelector('.btn-create').addEventListener('click', () => {
+	window.location.href = "characterCreation.html";
+});
+
 // document.body.addEventListener("keydown", (event) => {
 // 	if (event.key == "Enter") {
 // 		const inputSearch = document.querySelector('.input-search');

@@ -34,6 +34,7 @@ let selectedItems = selectItems();
 
 promise.then(data => {
 	selectedItems.img.setAttribute('src', 'data:image/gif;base64,' + data.image);
+	console.log(selectedItems.img);
 	selectedItems.name.setAttribute('value', data.name);
 	selectedItems.shortDesc.setAttribute('value', data.shortDescription);
 	selectedItems.desc.append(data.description);
@@ -42,6 +43,10 @@ promise.then(data => {
 selectedItems.uploadImg.addEventListener('input', () => {
 	selectedItems.img.setAttribute('src', selectedItems.uploadImg.files[0].name);
 });
+
+document.querySelector('.fa-solid').addEventListener('click', () => {
+	window.location.href = `singleCharacter.html?id=${id}`;
+})
 
 document.querySelector('.btn-save').addEventListener('click', () => {
 	selectedItems = selectItems();
@@ -60,7 +65,7 @@ document.querySelector('.btn-save').addEventListener('click', () => {
 				dataUrl
 			);
 	
-		// characterManager.changeCharacterData(newCharacter);
+			characterManager.changeCharacterData(newCharacter);
 		});
 	} else {
 		const newCharacter = new Character(

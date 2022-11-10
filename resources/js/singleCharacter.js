@@ -13,3 +13,7 @@ characterManager.displayCharacter(id);
 document.querySelector('.btn-update').addEventListener('click', () => {
 	window.location.href = `characterEditor.html?id=${id}`;
 });
+
+document.querySelector('.fa-solid').addEventListener('click', () => {
+	window.location.href = `index.html`;
+});
