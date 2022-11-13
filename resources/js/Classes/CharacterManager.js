@@ -41,6 +41,34 @@ export class CharacterManager {
 		}
 	}
 
+	async createCharacter(character) {
+		const name = character.name;
+		const shortDescription = character.shortDescription;
+		const description = character.description;
+		let image = character.image;
+		image = image.replace("data:", "").replace(/^.+,/, "");
+
+		const requestOptions = {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		body: JSON.stringify({
+			name,
+			shortDescription,
+			description,
+			image,
+		}),
+		};
+
+		const response = await fetch(
+			`${this.url}characters/`,
+			requestOptions
+		);
+
+		const promise = await response.json();
+
+		return promise;
+	}
+
 	async changeCharacterRequest(character) {
 		const name = character.name;
 		const shortDescription = character.shortDescription;
