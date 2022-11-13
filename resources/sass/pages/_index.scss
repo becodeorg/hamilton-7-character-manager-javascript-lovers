@@ -33,8 +33,13 @@ header{
 
 .card {
   width: 300px !important;
+  height: 525px;
     p {
       overflow:hidden;
+    }
+
+    .card__description {
+      height: 175px;
     }
 
     .card_button {
@@ -42,10 +47,18 @@ header{
       justify-content: center;
       align-items: center;
       margin: auto;
-      bottom: 20px;
-      width: 100px;
-      height: 30px;
+      width: 150px;
+      height: 45px;
       outline: none;
+      color: white;
+      background-color: #198cbd;
+      border: none;
+      cursor: pointer;
+      font-family: $paragraph-font;
+
+      &:hover {
+        background-color: #115674;
+      }
     }
 }
 

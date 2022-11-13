@@ -59,11 +59,6 @@ body {
         align-items: center;
         justify-content: center;
         border-radius: 50%;
-
-        &:hover {
-          cursor: pointer;
-          background-color: #198cbd;
-        }
       }
 
       .card__name {
@@ -71,11 +66,6 @@ body {
         text-align: center;
         font-family: $heading-font;
         margin: 20px;
-
-        &:hover {
-          cursor: pointer;
-            color: #198cbd;
-        }
       }
 
       &__short-description {
