@@ -41,7 +41,6 @@ document.querySelector('.btn-create').addEventListener('click', () => {
 			);
 
 			characterManager.createCharacter(newCharacter);
-			window.location.href = 'index.html';
 			alert("Character created");
 		});
 	}
