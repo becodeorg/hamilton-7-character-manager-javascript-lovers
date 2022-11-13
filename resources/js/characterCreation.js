@@ -7,10 +7,8 @@ const url = `https://character-database.becode.xyz/`;
 const currentURL = window.location.href;
 
 const characterManager = new CharacterManager(url);
-const stringUtils = new StringUtils();
 const dataUrlConverter = new DataUrlConverter();
 
-const id = stringUtils.extractData(currentURL);
-
-const promise = characterManager.getCharacterPromiseByID(id);
-
+document.querySelector('.btn-create').addEventListener('click', () => {
+	const name = document.querySelector('.create-card__name');
+});

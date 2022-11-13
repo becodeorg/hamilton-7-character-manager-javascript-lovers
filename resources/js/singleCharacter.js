@@ -17,3 +17,14 @@ document.querySelector('.btn-update').addEventListener('click', () => {
 document.querySelector('.fa-solid').addEventListener('click', () => {
 	window.location.href = `index.html`;
 });
+
+// fonction asycnhrone
+async function deleteCharacter() {
+	// requête avec l'url de l'API + characters/ + id
+}
+
+document.querySelector('.btn-delete').addEventListener('click', () => {
+	if (confirm("Do you really want to delete this character ?") == true) {
+		// appel deleteCharacter()
+	}
+});
