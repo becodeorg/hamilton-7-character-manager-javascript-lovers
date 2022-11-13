@@ -14,7 +14,6 @@
   .card__image {
     padding: 2px;
     background-color: hsla(0, 0%, 100%, 0.05);
-    color:white;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -24,8 +23,8 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    font-family: $paragraph-font;
-    font-size:14px;
+    color: transparent;
+    overflow: hidden;
   }
   .create-card__image {
     display: inline-block;
