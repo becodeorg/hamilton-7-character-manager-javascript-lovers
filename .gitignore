@@ -2,3 +2,4 @@
 node_modules/
 resources/css/style.css
 ressources/css/style.css.map
+.sass-cache
