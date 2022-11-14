@@ -22,6 +22,6 @@ document.querySelector('.btn-delete').addEventListener("click", () => {
     if (confirm("Are you sure to delete this character ?")) {
 		characterManager.deleteCharacter(id);
 		alert("Character deleted");
-		window.location.href = `index.html`;
+		//window.location.href = `index.html`;
 	}
 });

@@ -33,16 +33,19 @@ document.body.addEventListener("keydown", (event) => {
 
 						const h2 = document.createElement('h2');
 						h2.classList.add('card__name');
+						h2.classList.add('card__name--height');
 						h2.append(characters[i].name);
 						article.appendChild(h2);
 
 						const pShortDesc = document.createElement('p');
 						pShortDesc.classList.add('card__short-description');
+						pShortDesc.classList.add('.card__short-desc--height');
 						pShortDesc.append(characters[i].shortDescription);
 						article.appendChild(pShortDesc);
 
 						const pDesc = document.createElement('p');
 						pDesc.classList.add('card__description');
+						pDesc.classList.add('card__description--height');
 						pDesc.append(characters[i].description);
 						article.appendChild(pDesc);
 
@@ -67,16 +70,19 @@ document.body.addEventListener("keydown", (event) => {
 
 						const h2 = document.createElement('h2');
 						h2.classList.add('card__name');
+						h2.classList.add('card__name--height');
 						h2.append(characters[i].name);
 						article.appendChild(h2);
 
 						const pShortDesc = document.createElement('p');
 						pShortDesc.classList.add('card__short-description');
+						pShortDesc.classList.add('.card__short-desc--height');
 						pShortDesc.append(characters[i].shortDescription);
 						article.appendChild(pShortDesc);
 
 						const pDesc = document.createElement('p');
 						pDesc.classList.add('card__description');
+						pDesc.classList.add('card__description--height');
 						pDesc.append(characters[i].description);
 						article.appendChild(pDesc);
 

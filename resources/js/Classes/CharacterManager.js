@@ -76,7 +76,7 @@ export class CharacterManager {
 				"Content-Type": "application/json"
 			}
 		};
-		const deletedCharacter = await fetch(`${url}characters/${id}`, requestOptions);
+		const deletedCharacter = await fetch(`${this.url}characters/${id}`, requestOptions);
 	
 		return deletedCharacter;
 	}
@@ -126,7 +126,7 @@ export class CharacterManager {
 
 		promise.then(data => {
 			for (let i = 0; i < data.length; i++) {
-				if (data[i].image) {
+				if (data[i].image && data[i].name && data[i].shortDescription && data[i].description) {
 					const character = new Character(data[i].id, data[i].name, data[i].shortDescription, data[i].description, data[i].image);
 					characters.push(character);
 
@@ -141,16 +141,19 @@ export class CharacterManager {
 
 					const h2 = document.createElement('h2');
 					h2.classList.add('card__name');
+					h2.classList.add('card__name--height');
 					h2.append(data[i].name);
 					article.appendChild(h2);
 
 					const pShortDesc = document.createElement('p');
 					pShortDesc.classList.add('card__short-description');
+					pShortDesc.classList.add('.card__short-desc--height');
 					pShortDesc.append(data[i].shortDescription);
 					article.appendChild(pShortDesc);
 
 					const pDesc = document.createElement('p');
 					pDesc.classList.add('card__description');
+					pDesc.classList.add('card__description--height');
 					pDesc.append(data[i].description);
 					article.appendChild(pDesc);
 

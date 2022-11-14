@@ -33,13 +33,16 @@ header{
 
 .card {
   width: 300px !important;
-  height: 525px;
     p {
       overflow:hidden;
     }
 
-    .card__description {
-      height: 175px;
+    &__name--height, &__short-description--height {
+      height: 50px;
+    }
+
+    &__description--height {
+      height: 100px;
     }
 
     .card_button {
@@ -55,6 +58,8 @@ header{
       border: none;
       cursor: pointer;
       font-family: $paragraph-font;
+      margin-bottom: 50px;
+      margin-top: 50px;
 
       &:hover {
         color: #198cbd;
