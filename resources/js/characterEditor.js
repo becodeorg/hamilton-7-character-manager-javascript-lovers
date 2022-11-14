@@ -79,3 +79,18 @@ document.querySelector('.btn-save').addEventListener('click', () => {
 		characterManager.changeCharacterData(newCharacter, selectedItems);
 	}
 });
+
+const btnDelete = document.querySelector('.btn-delete');
+btnDelete.addEventListener("click", () => {
+    if (confirm("Are you sure to delete this character ?"));
+const getDeleteCharacter = fetch ("`https://character-database.becode.xyz/characters/${this.url}characters`, { method: 'DELETE' }")
+})
+
+const dltCharacter = async () => 
+ dltCharacter
+    .then((response) => await response.json())
+    .then(json) => {} console.log(json); 
+
+        return dltCharacter;
+        async function getDeleteCharacter () 
+const request

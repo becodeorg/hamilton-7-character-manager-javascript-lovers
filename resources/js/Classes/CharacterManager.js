@@ -69,6 +69,18 @@ export class CharacterManager {
 		return promise;
 	}
 
+	async deleteCharacter(id) {
+		const requestOptions = {
+			method: 'DELETE',
+			headers: {
+				"Content-Type": "application/json"
+			}
+		};
+		const deletedCharacter = await fetch(`${url}characters/${id}`, requestOptions);
+	
+		return deletedCharacter;
+	}
+
 	async changeCharacterRequest(character) {
 		const name = character.name;
 		const shortDescription = character.shortDescription;
