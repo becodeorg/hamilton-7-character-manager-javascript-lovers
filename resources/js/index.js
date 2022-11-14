@@ -43,12 +43,6 @@ document.body.addEventListener("keydown", (event) => {
 						pShortDesc.append(characters[i].shortDescription);
 						article.appendChild(pShortDesc);
 
-						const pDesc = document.createElement('p');
-						pDesc.classList.add('card__description');
-						pDesc.classList.add('card__description--height');
-						pDesc.append(characters[i].description);
-						article.appendChild(pDesc);
-
 						const button = document.createElement('button');
 						button.classList.add('card_button');
 						button.append('See character');
@@ -79,12 +73,6 @@ document.body.addEventListener("keydown", (event) => {
 						pShortDesc.classList.add('.card__short-desc--height');
 						pShortDesc.append(characters[i].shortDescription);
 						article.appendChild(pShortDesc);
-
-						const pDesc = document.createElement('p');
-						pDesc.classList.add('card__description');
-						pDesc.classList.add('card__description--height');
-						pDesc.append(characters[i].description);
-						article.appendChild(pDesc);
 
 						const button = document.createElement('button');
 						button.classList.add('card_button');

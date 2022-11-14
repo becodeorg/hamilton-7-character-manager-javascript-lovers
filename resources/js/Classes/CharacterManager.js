@@ -151,12 +151,6 @@ export class CharacterManager {
 					pShortDesc.append(data[i].shortDescription);
 					article.appendChild(pShortDesc);
 
-					const pDesc = document.createElement('p');
-					pDesc.classList.add('card__description');
-					pDesc.classList.add('card__description--height');
-					pDesc.append(data[i].description);
-					article.appendChild(pDesc);
-
 					const button = document.createElement('button');
 					button.classList.add('card_button');
 					button.append('See character');
