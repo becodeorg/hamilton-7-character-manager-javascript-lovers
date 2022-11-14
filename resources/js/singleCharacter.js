@@ -1,5 +1,5 @@
-import {CharacterManager} from './Classes/CharacterManager.js';
-import {StringUtils} from './Classes/StringUtils.js';
+import { CharacterManager } from './Classes/CharacterManager.js';
+import { StringUtils } from './Classes/StringUtils.js';
 
 const url = `https://character-database.becode.xyz/`;
 const characterManager = new CharacterManager(url);
@@ -22,6 +22,6 @@ document.querySelector('.btn-delete').addEventListener("click", () => {
     if (confirm("Are you sure to delete this character ?")) {
 		characterManager.deleteCharacter(id);
 		alert("Character deleted");
-		//window.location.href = `index.html`;
+		window.location.href = `index.html`;
 	}
 });

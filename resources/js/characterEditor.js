@@ -34,7 +34,6 @@ let selectedItems = selectItems();
 
 promise.then(data => {
 	selectedItems.img.setAttribute('src', 'data:image/gif;base64,' + data.image);
-	console.log(selectedItems.img);
 	selectedItems.name.setAttribute('value', data.name);
 	selectedItems.shortDesc.setAttribute('value', data.shortDescription);
 	selectedItems.desc.append(data.description);
@@ -78,7 +77,7 @@ document.querySelector('.btn-save').addEventListener('click', () => {
 				selectedItems.img.src
 			);
 
-			console.log(characterManager.changeCharacterData(newCharacter, selectedItems));
+			characterManager.changeCharacterData(newCharacter, selectedItems);
 			alert('Character modified');
 		}
 	} else {

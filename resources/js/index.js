@@ -15,7 +15,6 @@ document.body.addEventListener("keydown", (event) => {
 		const inputSearchValue = inputSearch.value;
 
 		if (inputSearchValue) {
-			console.log(inputSearchValue);
 			inputSearch.style.border = "none";
 			if (!inputSearchValue.includes('script')) {
 				const main = document.querySelector('main');
