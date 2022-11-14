@@ -343,13 +343,15 @@ header .input-search:focus {
 
 .card {
   width: 300px !important;
-  height: 525px;
 }
 .card p {
   overflow: hidden;
 }
-.card .card__description {
-  height: 175px;
+.card__name--height, .card__short-description--height {
+  height: 50px;
+}
+.card__description--height {
+  height: 100px;
 }
 .card .card_button {
   display: flex;
@@ -364,6 +366,8 @@ header .input-search:focus {
   border: none;
   cursor: pointer;
   font-family: "Open Sans", sans-serif;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 .card .card_button:hover {
   color: #198cbd;
@@ -448,6 +452,7 @@ body main .card {
   background-color: rgba(255, 255, 255, 0.05);
   width: 370px;
   max-width: 370px;
+  height: auto;
   padding: 20px;
   margin: auto;
   margin-bottom: 20px;
@@ -471,6 +476,7 @@ body main .card .card__name {
   text-align: center;
   font-family: "Sofia", cursive;
   margin: 20px;
+  overflow: hidden;
 }
 body main .card__short-description {
   color: white;
@@ -478,6 +484,8 @@ body main .card__short-description {
   font-weight: 100;
   font-size: 10px;
   font-family: "Open Sans", sans-serif;
+  width: 200px;
+  margin: auto;
 }
 body main .card__description {
   color: white;
@@ -489,7 +497,6 @@ body main .card__description {
 body main .card .edit-buttons {
   display: flex;
   justify-content: center;
-  margin: 20px;
 }
 body main .card .edit-buttons .btn-update {
   text-align: center;
