@@ -57,7 +57,9 @@ header{
       font-family: $paragraph-font;
 
       &:hover {
-        background-color: #115674;
+        color: #198cbd;
+        border: 2px solid #198cbd;
+        background-color: transparent;
       }
     }
 }

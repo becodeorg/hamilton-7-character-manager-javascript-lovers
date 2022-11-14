@@ -112,9 +112,7 @@ export class CharacterManager {
 	changeCharacterData(character, selectedItems) {
 		const promise = this.changeCharacterRequest(character);
 
-		promise.then(data => {
-			console.log(data);
-		});
+		return promise;
 	}
 
 	displaySingleCharacter(id) {
@@ -128,40 +126,42 @@ export class CharacterManager {
 
 		promise.then(data => {
 			for (let i = 0; i < data.length; i++) {
-				const character = new Character(data[i].id, data[i].name, data[i].shortDescription, data[i].description, data[i].image);
-				characters.push(character);
+				if (data[i].image) {
+					const character = new Character(data[i].id, data[i].name, data[i].shortDescription, data[i].description, data[i].image);
+					characters.push(character);
 
-				const article = document.createElement('article');
-				article.classList.add('card');
-				main.appendChild(article);
+					const article = document.createElement('article');
+					article.classList.add('card');
+					main.appendChild(article);
 
-				const img = document.createElement('img');
-				img.classList.add('card__image');
-				img.setAttribute('src', 'data:image/gif;base64,' + data[i].image);
-				article.appendChild(img);
+					const img = document.createElement('img');
+					img.classList.add('card__image');
+					img.setAttribute('src', 'data:image/gif;base64,' + data[i].image);
+					article.appendChild(img);
 
-				const h2 = document.createElement('h2');
-				h2.classList.add('card__name');
-				h2.append(data[i].name);
-				article.appendChild(h2);
+					const h2 = document.createElement('h2');
+					h2.classList.add('card__name');
+					h2.append(data[i].name);
+					article.appendChild(h2);
 
-				const pShortDesc = document.createElement('p');
-				pShortDesc.classList.add('card__short-description');
-				pShortDesc.append(data[i].shortDescription);
-				article.appendChild(pShortDesc);
+					const pShortDesc = document.createElement('p');
+					pShortDesc.classList.add('card__short-description');
+					pShortDesc.append(data[i].shortDescription);
+					article.appendChild(pShortDesc);
 
-				const pDesc = document.createElement('p');
-				pDesc.classList.add('card__description');
-				pDesc.append(data[i].description);
-				article.appendChild(pDesc);
+					const pDesc = document.createElement('p');
+					pDesc.classList.add('card__description');
+					pDesc.append(data[i].description);
+					article.appendChild(pDesc);
 
-				const button = document.createElement('button');
-				button.classList.add('card_button');
-				button.append('See character');
-				button.addEventListener('click', () => {
-					window.location.href = `singleCharacter.html?id=${data[i].id}`;
-				});
-				article.appendChild(button);
+					const button = document.createElement('button');
+					button.classList.add('card_button');
+					button.append('See character');
+					button.addEventListener('click', () => {
+						window.location.href = `singleCharacter.html?id=${data[i].id}`;
+					});
+					article.appendChild(button);
+				}
 			}
 		});
 

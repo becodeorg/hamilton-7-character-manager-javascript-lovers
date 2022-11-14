@@ -42,6 +42,7 @@ document.querySelector('.btn-create').addEventListener('click', () => {
 
 			characterManager.createCharacter(newCharacter);
 			alert("Character created");
+			window.location.href = 'index.html';
 		});
 	}
 });

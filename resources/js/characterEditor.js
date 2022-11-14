@@ -53,44 +53,35 @@ document.querySelector('.btn-save').addEventListener('click', () => {
 	const file = selectedItems.uploadImg.files[0];
 	let dataUrlPromise;
 
-	if (file) {
-		dataUrlPromise = dataUrlConverter.getDataUrl(file);
+	if (selectedItems.uploadImg && selectedItems.name && selectedItems.shortDesc && selectedItems.desc) {
+		if (file) {
+			dataUrlPromise = dataUrlConverter.getDataUrl(file);
 
-		dataUrlPromise.then(dataUrl => {
+			dataUrlPromise.then(dataUrl => {
+				const newCharacter = new Character(
+					id,
+					selectedItems.name.value,
+					selectedItems.shortDesc.value,
+					selectedItems.desc.value,
+					dataUrl
+				);
+		
+				characterManager.changeCharacterData(newCharacter);
+				alert('Character modified');
+			});
+		} else {
 			const newCharacter = new Character(
 				id,
 				selectedItems.name.value,
 				selectedItems.shortDesc.value,
 				selectedItems.desc.value,
-				dataUrl
+				selectedItems.img.src
 			);
-	
-			characterManager.changeCharacterData(newCharacter);
-		});
-	} else {
-		const newCharacter = new Character(
-			id,
-			selectedItems.name.value,
-			selectedItems.shortDesc.value,
-			selectedItems.desc.value,
-			selectedItems.img.src
-		);
 
-		characterManager.changeCharacterData(newCharacter, selectedItems);
+			console.log(characterManager.changeCharacterData(newCharacter, selectedItems));
+			alert('Character modified');
+		}
+	} else {
+		alert("Field missing");
 	}
 });
-
-const btnDelete = document.querySelector('.btn-delete');
-btnDelete.addEventListener("click", () => {
-    if (confirm("Are you sure to delete this character ?"));
-const getDeleteCharacter = fetch ("`https://character-database.becode.xyz/characters/${this.url}characters`, { method: 'DELETE' }")
-})
-
-const dltCharacter = async () => 
- dltCharacter
-    .then((response) => await response.json())
-    .then(json) => {} console.log(json); 
-
-        return dltCharacter;
-        async function getDeleteCharacter () 
-const request
