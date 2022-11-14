@@ -3,17 +3,16 @@ import { CharacterManager } from './Classes/CharacterManager.js';
 const url = `https://character-database.becode.xyz/`;
 const characterManager = new CharacterManager(url);
 
+const characters = characterManager.displayCharacters();
+const inputSearch = document.querySelector('.input-search');
+
 document.querySelector('.btn-create').addEventListener('click', () => {
 	window.location.href = "characterCreation.html";
 });
 
-const characters = characterManager.displayCharacters();
-
-const inputSearch = document.querySelector('.input-search');
-
 inputSearch.addEventListener('input', () => {
 	const inputSearchValue = inputSearch.value;
-	
+
 	if (!inputSearchValue.includes('script')) {
 		const main = document.querySelector('main');
 		main.replaceChildren();
