@@ -348,7 +348,7 @@ header .input-search:focus {
   overflow: hidden;
 }
 .card__name--height, .card__short-description--height {
-  height: 50px;
+  height: 36px;
 }
 .card__description--height {
   height: 100px;
