@@ -39,9 +39,9 @@ promise.then(data => {
 	selectedItems.desc.append(data.description);
 });
 
-selectedItems.uploadImg.addEventListener('input', () => {
-	selectedItems.img.setAttribute('src', selectedItems.uploadImg.files[0].name);
-});
+// selectedItems.uploadImg.addEventListener('input', () => {
+// 	selectedItems.img.setAttribute('src', selectedItems.uploadImg.files[0].name);
+// });
 
 document.querySelector('.fa-solid').addEventListener('click', () => {
 	window.location.href = `singleCharacter.html?id=${id}`;
@@ -67,8 +67,11 @@ document.querySelector('.btn-save').addEventListener('click', () => {
 		
 				characterManager.changeCharacterData(newCharacter);
 				alert('Character modified');
+				window.location.href = `singleCharacter.html?id=${id}`;
 			});
 		} else {
+			console.log(selectedItems.img.src);
+
 			const newCharacter = new Character(
 				id,
 				selectedItems.name.value,
@@ -77,8 +80,9 @@ document.querySelector('.btn-save').addEventListener('click', () => {
 				selectedItems.img.src
 			);
 
-			characterManager.changeCharacterData(newCharacter, selectedItems);
+			characterManager.changeCharacterData(newCharacter);
 			alert('Character modified');
+			window.location.href = `singleCharacter.html?id=${id}`;
 		}
 	} else {
 		alert("Field missing");

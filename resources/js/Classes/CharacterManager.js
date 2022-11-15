@@ -109,7 +109,7 @@ export class CharacterManager {
 		return promise;
   }
 
-	changeCharacterData(character, selectedItems) {
+	changeCharacterData(character) {
 		const promise = this.changeCharacterRequest(character);
 
 		return promise;
