@@ -43,6 +43,14 @@ promise.then(data => {
 // 	selectedItems.img.setAttribute('src', selectedItems.uploadImg.files[0].name);
 // });
 
+document.querySelector('.btn-delete').addEventListener("click", () => {
+    if (confirm("Are you sure to delete this character ?")) {
+		characterManager.deleteCharacter(id);
+		alert("Character deleted");
+		window.location.href = `index.html`;
+	}
+});
+
 document.querySelector('.fa-solid').addEventListener('click', () => {
 	window.location.href = `singleCharacter.html?id=${id}`;
 })
